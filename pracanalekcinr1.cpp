@@ -8,10 +8,17 @@ void cezar(string tekst)
 	int x;
 	cout << "podaj wspolczynnik przesuniecia" << endl;
 	cin >> x;
+	if(x>0 && x<27)
+	{	
 	for (int i = 0;i <= tekst.length();i++)
 	{
 		if (tekst[i] >= 97 && tekst[i] <= 122 - x) tekst[i] = int(tekst[i]) + x;
 		else if (tekst[i] >= 123 - x && tekst[i] <= 122) tekst[i] = int(tekst[i]) - 26 + x;
+	}	
+	}
+	else
+	{
+	cout << "Podana zla wartosc wspolczynnika przesuniecia" << endl;	
 	}
 }
 
